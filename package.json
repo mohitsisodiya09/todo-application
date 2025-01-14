@@ -8,11 +8,26 @@
     "node": ">=20.11.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "prestart": "npx tsx check-node-version",
+    "start": "node app.js",
+    "lint": "eslint \"{src,test}/**/*.ts\"",
+    "lint:fix": "eslint \"{src,test}/**/*.ts\" --fix"
   },
   "keywords": [
     "Express.js",
     "Typescript"
-  ]
+  ],
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "semver": "^7.6.3"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@types/node": "^22.10.6",
+    "@types/semver": "^7.5.8",
+    "semantic-release": "^24.2.1"
+  }
 }

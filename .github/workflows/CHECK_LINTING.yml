@@ -1,0 +1,22 @@
+name: Run Linting in the project
+on: [pull_request]
+
+jobs:
+  lint:
+    name: Auto fix Linting
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4.1.1
+
+      - name: Install Dependencies
+        run: npm install        
+
+      - name: Run lint fix
+        run: npm run lint:fix
+
+      - name: Run lint
+        run: npm run lint
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

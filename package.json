@@ -13,7 +13,8 @@
     "prestart": "npx tsx check-node-version",
     "start": "node app.js",
     "lint": "eslint \"{src,test}/**/*.ts\"",
-    "lint:fix": "eslint \"{src,test}/**/*.ts\" --fix"
+    "lint:fix": "eslint \"{src,test}/**/*.ts\" --fix",
+    "prepare": "husky"
   },
   "keywords": [
     "Express.js",
@@ -24,6 +25,8 @@
     "semver": "^7.6.3"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@types/node": "^22.10.6",

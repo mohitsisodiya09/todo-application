@@ -1,0 +1,18 @@
+{
+  "name": "todo-application",
+  "version": "1.0.0",
+  "description": "A simple TODO application implemented using Express.js, TypeScript and Mongoose.",
+  "author": "Mohit Sisodiya",
+  "license": "ISC",
+  "engines": {
+    "node": ">=20.11.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "Express.js",
+    "Typescript"
+  ]
+}

@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import express, { Application } from 'express';
 import mongoose from 'mongoose';
 import { authRouter } from './routes/auth.route';
+import { todoRouter } from './routes/todo.route';
 import { userRouter } from './routes/user.route';
 
 dotenv.config();
@@ -17,5 +18,6 @@ mongoose
 app.use(express.json());
 app.use('/api/auth', authRouter);
 app.use('/api/user', userRouter);
+app.use('/api/todo', todoRouter);
 
 app.listen(port, () => console.log('Server listening on port:', port));

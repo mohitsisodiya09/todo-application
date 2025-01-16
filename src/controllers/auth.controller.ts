@@ -29,7 +29,7 @@ export const login = async (req: Request<unknown, unknown, ILoginRequestBody>, r
 
       res.status(200).json({
         message: 'User logged in successfully',
-        user: { firstName: user.firstName, lastName: user.lastName, email: user.email },
+        user: { _id: user._id, firstName: user.firstName, lastName: user.lastName, email: user.email },
         token: token,
       });
     } else {

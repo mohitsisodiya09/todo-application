@@ -1,3 +1,6 @@
+/**
+ * Interface for the request body of the Signup API.
+ */
 export interface ISignupRequestBody {
   email: string;
   password: string;
@@ -5,6 +8,9 @@ export interface ISignupRequestBody {
   lastName?: string;
 }
 
+/**
+ * Interface for the request body of the Login API.
+ */
 export interface ILoginRequestBody {
   email: string;
   password: string;

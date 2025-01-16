@@ -5,6 +5,7 @@ import mongoose from 'mongoose';
 import { authRouter } from './routes/auth.route';
 import { todoRouter } from './routes/todo.route';
 import { userRouter } from './routes/user.route';
+import './utils/cron';
 
 dotenv.config();
 const app: Application = express();

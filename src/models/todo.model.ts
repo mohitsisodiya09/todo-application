@@ -13,7 +13,7 @@ const todoSchema: Schema = new Schema({
   description: { type: String, required: true },
   dueDate: { type: Date, required: true },
   isCompleted: { type: Boolean, default: false },
-  user: { type: Schema.Types.ObjectId, ref: 'User', required: true },
+  userId: { type: Schema.Types.ObjectId, ref: 'User', required: true },
 });
 
 export default mongoose.model<ITodo>('Todo', todoSchema);

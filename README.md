@@ -63,8 +63,6 @@ Here are the available npm scripts in the project:
 ### 3. **CRON Jobs for Task Management**
    - A **CRON job** runs daily at midnight to mark todos that are past their due date as completed.
 
----
-
 ## Additional Features & Configuration
 
 ### 1. **GitHub Workflows (.github)**
@@ -97,10 +95,8 @@ Here are the available npm scripts in the project:
    - A **check-node-version** script is included to verify the Node.js version.
    - Prevents compatibility issues by ensuring the correct Node.js version is being used.
 
----
-
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
 ## Author
 ### **Mohit Sisodiya**

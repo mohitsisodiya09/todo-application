@@ -13,9 +13,6 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Initialize Husky
-        run: npx husky install
-
       - name: Run lint fix
         run: npm run lint:fix
 

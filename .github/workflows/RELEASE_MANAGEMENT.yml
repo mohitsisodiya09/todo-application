@@ -23,12 +23,6 @@ jobs:
         with:
           node-version: 20.11.1
 
-      - name: Install Dependency
-        run: npm ci # Ensure clean install
-
-      - name: Install Semantic Release and Plugins
-        run: npm install -D semantic-release @semantic-release/changelog @semantic-release/git
-
       - name: Run semantic release
         run: npx semantic-release
     env:

@@ -2,23 +2,29 @@
 import dotenv from 'dotenv';
 import express, { Application } from 'express';
 import mongoose from 'mongoose';
-import { authRouter } from './routes/auth.route';
-import { todoRouter } from './routes/todo.route';
-import { userRouter } from './routes/user.route';
+import routes from './routes/index.route';
 import './utils/cron';
 
+// Load environment variables from the .env file
 dotenv.config();
-const app: Application = express();
-const port = process.env.PORT;
 
+// Initialize the Express application
+const app: Application = express();
+const port = process.env.PORT || 3000;
+
+// Connect to MongoDB
 mongoose
   .connect(process.env.MONGO_URL as string)
   .then(() => console.log('Connected to MongoDB'))
   .catch((err) => console.error('Failed to connect to MongoDB:', err));
 
+// Middleware to parse incoming JSON requests
 app.use(express.json());
-app.use('/api/auth', authRouter);
-app.use('/api/user', userRouter);
-app.use('/api/todo', todoRouter);
 
+// Define routes
+app.use('/api', routes);
+
+// Start the Express server
 app.listen(port, () => console.log('Server listening on port:', port));
+
+export default app; // Export the app instance for testing or further usage
